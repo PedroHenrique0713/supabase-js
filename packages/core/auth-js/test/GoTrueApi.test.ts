@@ -1,7 +1,4 @@
-import {
-  authClientWithSession,
-  serviceRoleApiClient,
-} from './lib/clients'
+import { authClientWithSession, serviceRoleApiClient } from './lib/clients'
 
 import {
   createNewUserWithEmail,
@@ -668,8 +665,7 @@ describe('GoTrueAdminApi', () => {
         expect(testClientIds.length).toBe(3) // Verify all 3 were created
 
         // List all clients
-        const { data: allData, error: allError } =
-          await serviceRoleApiClient.oauth.listClients()
+        const { data: allData, error: allError } = await serviceRoleApiClient.oauth.listClients()
 
         expect(allError).toBeNull()
         expect(allData).not.toBeNull()
@@ -683,11 +679,10 @@ describe('GoTrueAdminApi', () => {
         }
 
         // Test pagination
-        const { data: pageData, error: pageError } =
-          await serviceRoleApiClient.oauth.listClients({
-            page: 1,
-            perPage: 2,
-          })
+        const { data: pageData, error: pageError } = await serviceRoleApiClient.oauth.listClients({
+          page: 1,
+          perPage: 2,
+        })
 
         expect(pageError).toBeNull()
         expect(pageData).not.toBeNull()

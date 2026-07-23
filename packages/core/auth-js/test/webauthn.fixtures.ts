@@ -13,8 +13,7 @@ export const webauthnAssertionCredentialResponse = {
   challengeId: '3c18b413-67d0-4e39-a78e-ab700693169f',
   challenge: 'TEST-CHALLENGE-BASE64URL-ENCODED-STRING-FOR-WEBAUTHN-AUTHENTICATION-FLOW',
 
-  credentialId:
-    'SYNTHETIC-TEST-CREDENTIAL-ID-0123456789ABCDEF-NOT-A-REAL-CREDENTIAL-IDENTIFIER',
+  credentialId: 'SYNTHETIC-TEST-CREDENTIAL-ID-0123456789ABCDEF-NOT-A-REAL-CREDENTIAL-IDENTIFIER',
   rpId: 'localhost',
   origin: 'http://localhost:5173',
 
@@ -32,7 +31,6 @@ export const webauthnAssertionCredentialResponse = {
     authenticatorAttachment: 'cross-platform',
     clientExtensionResults: {},
   } as AuthenticationResponseJSON,
-
 
   authenticatorDataParsed: {
     rpIdHash: 'SYNTHETIC-RP-ID-HASH-TEST-VALUE-BASE64-ENCODED',

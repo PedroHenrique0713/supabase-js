@@ -248,7 +248,10 @@ test('RPC call with field aggregate', async () => {
 })
 
 test('RPC call with bigint param is accepted by a bigint Postgres argument', async () => {
-  const res = await postgrest.rpc('echo_bigint_as_text' as any, { bigint_param: BIGINT_PARAM } as any)
+  const res = await postgrest.rpc(
+    'echo_bigint_as_text' as any,
+    { bigint_param: BIGINT_PARAM } as any
+  )
 
   expect(res).toMatchInlineSnapshot(`
     {

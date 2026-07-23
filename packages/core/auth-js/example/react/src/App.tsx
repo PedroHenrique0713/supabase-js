@@ -45,7 +45,9 @@ function App() {
       auth
         .verifyOtp({
           token_hash,
-          type: (type as 'signup' | 'invite' | 'magiclink' | 'recovery' | 'email_change' | 'email') || 'email',
+          type:
+            (type as 'signup' | 'invite' | 'magiclink' | 'recovery' | 'email_change' | 'email') ||
+            'email',
         })
         .then(({ error }) => {
           if (error) {
@@ -148,7 +150,10 @@ function App() {
   const showIdentities = () => {
     return session?.user?.identities?.map((identity: UserIdentity) => {
       return (
-        <div key={identity.identity_id} className="flex flex-row p-2 my-2 bg-gray-200 max-h-100 rounded">
+        <div
+          key={identity.identity_id}
+          className="flex flex-row p-2 my-2 bg-gray-200 max-h-100 rounded"
+        >
           <div className="basis-1/4 p-2">
             {identity.provider[0].toUpperCase() + identity.provider.slice(1)}
           </div>
@@ -396,10 +401,7 @@ function App() {
           </div>
 
           {magicLinkStatus && (
-            <p
-              data-testid="magic-link-status"
-              className="mt-2 text-sm text-center text-gray-700"
-            >
+            <p data-testid="magic-link-status" className="mt-2 text-sm text-center text-gray-700">
               {magicLinkStatus.startsWith('error:')
                 ? magicLinkStatus
                 : 'Magic link sent! Check your email.'}

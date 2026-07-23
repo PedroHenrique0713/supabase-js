@@ -140,4 +140,3 @@ describe('Docker: Phone Password Auth', () => {
     expect(data.user?.phone).toBe(phone)
   })
 })
-

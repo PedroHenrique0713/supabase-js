@@ -27,4 +27,3 @@ describe('Docker: Sign Up Disabled', () => {
     expect(error?.message).toEqual('Signups not allowed for this instance')
   })
 })
-

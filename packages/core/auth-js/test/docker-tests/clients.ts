@@ -75,4 +75,3 @@ export const serviceRoleApiClient = new GoTrueAdminApi({
     Authorization: `Bearer ${SERVICE_ROLE_JWT}`,
   },
 })
-

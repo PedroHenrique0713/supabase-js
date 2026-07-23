@@ -3722,9 +3722,7 @@ describe('Lockless coordination (default) and legacy lock opt-in', () => {
   test('legacy path: custom `lock` is invoked when supplied', async () => {
     const mockLock = jest
       .fn()
-      .mockImplementation(async (name: string, timeout: number, fn: () => Promise<unknown>) =>
-        fn()
-      )
+      .mockImplementation(async (name: string, timeout: number, fn: () => Promise<unknown>) => fn())
 
     const client = new GoTrueClient({
       url: GOTRUE_URL_SIGNUP_ENABLED_AUTO_CONFIRM_ON,

@@ -1,5 +1,5 @@
-import { Chat } from "@/components/chat";
-import { ThemeSwitcher } from "@/components/theme-switcher";
+import { Chat } from '@/components/chat'
+import { ThemeSwitcher } from '@/components/theme-switcher'
 
 export default function Home() {
   return (
@@ -9,5 +9,5 @@ export default function Home() {
       </div>
       <Chat />
     </main>
-  );
+  )
 }

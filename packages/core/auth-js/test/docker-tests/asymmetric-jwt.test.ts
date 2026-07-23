@@ -112,4 +112,3 @@ describe('Docker: Asymmetric JWT (RS256)', () => {
     expect(data).toBeNull()
   })
 })
-

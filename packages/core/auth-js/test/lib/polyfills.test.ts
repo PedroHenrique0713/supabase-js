@@ -70,9 +70,7 @@ describe('polyfillGlobalThis', () => {
     const newKeys = Object.getOwnPropertyNames(Object.prototype)
 
     // Filter out any legitimate additions and look for __magic__
-    const addedKeys = newKeys.filter(
-      (key) => !originalKeys.includes(key) && key === '__magic__'
-    )
+    const addedKeys = newKeys.filter((key) => !originalKeys.includes(key) && key === '__magic__')
 
     expect(addedKeys.length).toBe(0)
   })

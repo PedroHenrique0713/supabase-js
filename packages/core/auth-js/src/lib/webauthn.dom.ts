@@ -199,8 +199,7 @@ export interface PublicKeyCredentialUserEntity {
  * @see {@link https://w3c.github.io/webauthn/#registrationceremony W3C WebAuthn Spec - Registration}
  * @see {@link https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredential MDN - PublicKeyCredential}
  */
-export interface RegistrationCredential
-  extends PublicKeyCredentialFuture<RegistrationResponseJSON> {
+export interface RegistrationCredential extends PublicKeyCredentialFuture<RegistrationResponseJSON> {
   response: AuthenticatorAttestationResponseFuture
 }
 
@@ -250,8 +249,7 @@ export interface RegistrationResponseJSON {
  * @see {@link https://w3c.github.io/webauthn/#authentication W3C WebAuthn Spec - Authentication}
  * @see {@link https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredential MDN - PublicKeyCredential}
  */
-export interface AuthenticationCredential
-  extends PublicKeyCredentialFuture<AuthenticationResponseJSON> {
+export interface AuthenticationCredential extends PublicKeyCredentialFuture<AuthenticationResponseJSON> {
   response: AuthenticatorAssertionResponse
 }
 
@@ -445,8 +443,10 @@ export type AuthenticatorTransportFuture =
  *
  * @see {@link https://w3c.github.io/webauthn/#dictdef-publickeycredentialdescriptor W3C WebAuthn Spec - PublicKeyCredentialDescriptor}
  */
-export interface PublicKeyCredentialDescriptorFuture
-  extends Omit<PublicKeyCredentialDescriptor, 'transports'> {
+export interface PublicKeyCredentialDescriptorFuture extends Omit<
+  PublicKeyCredentialDescriptor,
+  'transports'
+> {
   /**
    * How the authenticator communicates with clients.
    * @see {@link https://w3c.github.io/webauthn/#dom-publickeycredentialdescriptor-transports W3C - transports}
@@ -461,8 +461,10 @@ export interface PublicKeyCredentialDescriptorFuture
  * @see {@link https://w3c.github.io/webauthn/#dictdef-publickeycredentialcreationoptions W3C WebAuthn Spec - PublicKeyCredentialCreationOptions}
  * @see {@link https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialCreationOptions MDN - PublicKeyCredentialCreationOptions}
  */
-export interface PublicKeyCredentialCreationOptionsFuture
-  extends StrictOmit<PublicKeyCredentialCreationOptions, 'excludeCredentials' | 'user'> {
+export interface PublicKeyCredentialCreationOptionsFuture extends StrictOmit<
+  PublicKeyCredentialCreationOptions,
+  'excludeCredentials' | 'user'
+> {
   /**
    * Credentials that the authenticator should not create a new credential for.
    * @see {@link https://w3c.github.io/webauthn/#dom-publickeycredentialcreationoptions-excludecredentials W3C - excludeCredentials}
@@ -502,8 +504,10 @@ export interface PublicKeyCredentialCreationOptionsFuture
  * @see {@link https://w3c.github.io/webauthn/#dictdef-publickeycredentialrequestoptions W3C WebAuthn Spec - PublicKeyCredentialRequestOptions}
  * @see {@link https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialRequestOptions MDN - PublicKeyCredentialRequestOptions}
  */
-export interface PublicKeyCredentialRequestOptionsFuture
-  extends StrictOmit<PublicKeyCredentialRequestOptions, 'allowCredentials'> {
+export interface PublicKeyCredentialRequestOptionsFuture extends StrictOmit<
+  PublicKeyCredentialRequestOptions,
+  'allowCredentials'
+> {
   /**
    * A list of credentials acceptable for authentication.
    * @see {@link https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-allowcredentials W3C - allowCredentials}

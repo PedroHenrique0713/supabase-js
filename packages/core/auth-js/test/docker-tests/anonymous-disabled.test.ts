@@ -18,4 +18,3 @@ describe('Docker: Anonymous Sign-in Disabled', () => {
     expect(error?.message).toContain('Anonymous sign-ins are disabled')
   })
 })
-
